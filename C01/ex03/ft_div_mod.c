@@ -6,13 +6,12 @@
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 16:15:07 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/08/28 13:55:48 by mmisskin         ###   ########.fr       */
+/*   Updated: 2022/08/30 09:46:58 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-
-			*div = a / b;
-			*mod = a % b;
+	*div = a / b;
+	*mod = a % b;
 }

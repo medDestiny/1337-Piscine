@@ -6,26 +6,30 @@
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 18:29:42 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/08/28 20:01:33 by mmisskin         ###   ########.fr       */
+/*   Updated: 2022/08/30 17:20:24 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_rev_int_tab(int *tab, int size)
+void	ft_rev_int_tab(int *tab, int size)
 {
-	int    index;
-	int    iswap;
-	int    x;
-	index = size - 1;
-	iswap = 0;
-   	while (iswap <= size / 2)
-   	{
-		if (index >= 0)
+	int	index;
+	int	l_index;
+	int	temporary;
+
+	l_index = size - 1;
+	index = 0;
+	if (size > 0)
+	{
+		while (index < (size / 2))
 		{
-			x = tab[index];
-			tab[index] = tab[iswap];
-			tab[iswap] = x;
+			if (l_index >= index)
+			{
+				temporary = tab[l_index];
+				tab[l_index] = tab[index];
+				tab[index] = temporary;
+			}
+			l_index--;
+			index++;
 		}
-		index--;
-		iswap++;
 	}
 }

@@ -6,15 +6,16 @@
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 16:19:49 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/08/28 17:17:55 by mmisskin         ###   ########.fr       */
+/*   Updated: 2022/08/30 15:13:25 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strlen(char *str)
 {
-	while (*str != '\0')
-	{
-		str++;
-	}
-	return(str);
+	int	index;
+
+	index = 0;
+	while (str[index] != '\0')
+		index++;
+	return (index);
 }
