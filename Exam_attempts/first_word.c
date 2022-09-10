@@ -5,23 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/01 01:04:30 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/09/01 01:19:28 by mmisskin         ###   ########.fr       */
+/*   Created: 2022/09/07 21:40:02 by mmisskin          #+#    #+#             */
+/*   Updated: 2022/09/07 21:44:40 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
 
-int	main(int argc, char **argv)
+int	main(int ac, char **av)
 {
-	int i = 0;
-	if (argc == 2)
+	int	i;
+
+	i = 0;
+	if (ac == 2)
 	{
-		while (argv[1][i] != '\0' && argv[1][i] != 32 && argv[1][i] != 9)
-		{
-			write(1, &argv[1][i], 1);
-			i++;
-		}
+		while (av[1][i] && av[1][i] != ' ' && av[1][i] != '\t')
+			write(1, &av[1][i++], 1);
 	}
 	write(1, "\n", 1);
 }

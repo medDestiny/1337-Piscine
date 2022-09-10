@@ -5,31 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/02 08:31:35 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/09/02 08:48:23 by mmisskin         ###   ########.fr       */
+/*   Created: 2022/09/07 21:46:37 by mmisskin          #+#    #+#             */
+/*   Updated: 2022/09/07 21:53:00 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
 
-char	*ft_rev_print(char *str)
+int	main(int ac, char **av)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
-		i++;
-	while (i >= 0)
+	if (ac == 2)
 	{
-		write(1, &str[i], 1);
+		while (av[1][i])
+			i++;
 		i--;
+		while (i >= 0)
+			write(1, &av[1][i--], 1);
 	}
 	write(1, "\n", 1);
-	return (str);
-}
-
-int	main(int ac, char **av)
-{
-	if (ac == 2)
-		ft_rev_print(av[1]);
 }

@@ -5,29 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/02 08:49:41 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/09/02 08:59:21 by mmisskin         ###   ########.fr       */
+/*   Created: 2022/09/08 19:28:48 by mmisskin          #+#    #+#             */
+/*   Updated: 2022/09/08 19:35:11 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strrev(char *str)
 {
 	int	i;
-	int	l;
-	char	temp;
+	int l;
+	int	swp;
 
 	l = 0;
-	while (str[l] != '\0')
-		l++;
-	l -= 1;
 	i = 0;
-	while (l > i)
+	while (str[l])
+		l++;
+	while (i < (l / 2))
 	{
-		temp = str[i];
-		str[i] = str[l];
-		str[l] = temp;
+		swp = str[i];
+		str[i] = str[l - 1];
+		str[l - 1] = swp;
 		i++;
-		l--;
+		l--;	
 	}
 	return (str);
 }

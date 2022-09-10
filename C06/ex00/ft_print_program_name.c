@@ -6,7 +6,7 @@
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 15:50:40 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/09/01 15:54:52 by mmisskin         ###   ########.fr       */
+/*   Updated: 2022/09/10 16:48:38 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,10 @@ int	main(int argc, char *argv[])
 	int	i;
 
 	i = 0;
-	while (argv[0][i] != '\0')
+	while (argc && argv[0][i] != '\0')
 	{
 		write(1, &argv[0][i], 1);
 		i++;
 	}
+	write(1, "\n", 1);
 }

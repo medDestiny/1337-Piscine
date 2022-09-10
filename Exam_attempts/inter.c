@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/02 09:02:04 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/09/02 09:42:37 by mmisskin         ###   ########.fr       */
+/*   Created: 2022/09/08 15:26:01 by mmisskin          #+#    #+#             */
+/*   Updated: 2022/09/08 16:00:45 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
 
-int	check4doubl(char *str, char x,int pos)
+int	ft_check(char *str, char x, int pos)
 {
 	int	i;
 
@@ -20,40 +20,43 @@ int	check4doubl(char *str, char x,int pos)
 	while (i < pos)
 	{
 		if (str[i] == x)
-			return (1);
+			return (0);
 		i++;
 	}
-	return (0);
+	return (1);
 }
 
-void	inter(char *str,char *str2)
+void	inter(char *s1, char *s2)
 {
-	int	i;
-	int l;
+	int	x;
+	int	y;
 
-	i = 0;
-	while (str[i] != '\0')
+	x = 0;
+	y = 0;
+	while (s1[x])
 	{
-		l = 0;
-		while (str2[l] != '\0')
+		if (ft_check(s1, s1[x], x) == 1)
 		{
-			if (str[i] == str[l])
+			while (s2[y])
 			{
-				if (check4doubl(str, str[i], i) == 0)
+				if (s2[y] == s1[x])
 				{
-					write(1, &str[i], 1);
+					write(1, &s1[x], 1);
 					break;
 				}
+				y++;
 			}
-			l++;
-		}
-		i++;
+		}	
+		x++;
 	}
 }
 
 int	main(int ac, char **av)
 {
+	int	i;
+
+	i = 0;
 	if (ac == 3)
-		inter(av[1],av[2]);
+		inter(av[1], av[2]);
 	write(1, "\n", 1);
 }

@@ -5,24 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/31 23:54:55 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/09/01 00:02:04 by mmisskin         ###   ########.fr       */
+/*   Created: 2022/09/07 17:50:25 by mmisskin          #+#    #+#             */
+/*   Updated: 2022/09/07 17:53:26 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strlen(char *str)
 {
-	int index;
+	int	i;
 
-	index = 0;
-	while (str[index] != '\0')
-		index++;
-	return (index);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
 
 #include<stdio.h>
 
 int	main()
 {
-	printf("%d", ft_strlen("testink hh"));
+	char *str = "123456789";
+
+	printf("%d", ft_strlen(str));
 }

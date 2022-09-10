@@ -6,7 +6,7 @@
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 08:46:33 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/08/31 09:10:26 by mmisskin         ###   ########.fr       */
+/*   Updated: 2022/09/05 15:37:03 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_str_is_printable(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (!(str[i] >= 32 && str[i] <= 126))
+		if (!(str[i] >= 32 && str[i] <= 127))
 			return (0);
 		else
 			i++;

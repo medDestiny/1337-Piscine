@@ -5,51 +5,52 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/02 12:33:02 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/09/02 12:50:19 by mmisskin         ###   ########.fr       */
+/*   Created: 2022/09/08 18:10:04 by mmisskin          #+#    #+#             */
+/*   Updated: 2022/09/08 18:28:04 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
-void	rev(char c)
+
+char	mirror(char c)
 {
-	char x;
-	char y;
-	char x1;
-	char y1;
-	x1 = 'A';
-	y1 = 'Z';
-	x = 'a';
-	y = 'z';
+	char n = 'a';
+	char m = 'A';
+	char x = 'z';
+	char y = 'Z';
 	if (c >= 'a' && c <= 'z')
 	{
-		while (x != c)
+		while (n < c)
 		{
-			x++;
+			n++;
+			x--;
+		}
+		return (x);
+	}
+	if (c >= 'A' && c <= 'Z')
+	{
+		while (m < c)
+		{
+			m++;
 			y--;
 		}
-		write(1, &y, 1);
+		return (y);
 	}
-	else if (c >= 'A' && c <= 'Z')
-	{
-		while (x1 != c)
-		{
-			x1++;
-			y1--;
-		}
-		write(1, &y1, 1);
-	}
+	return (c);
 }
 
 int	main(int ac, char **av)
 {
 	int	i;
+	char c;
+
 	i = 0;
 	if (ac == 2)
 	{
-		while (av[1][i] != '\0')
+		while (av[1][i])
 		{
-			rev(av[1][i]);
+			c = mirror(av[1][i]);
+			write(1, &c, 1);
 			i++;
 		}
 	}

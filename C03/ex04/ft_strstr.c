@@ -6,31 +6,27 @@
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 18:31:13 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/09/04 10:27:07 by mmisskin         ###   ########.fr       */
+/*   Updated: 2022/09/10 11:02:19 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strstr(char *str, char *to_find)
 {
-	int	index;
-	int	index2;
-	char	ptr[2020];
+	int	x;
+	int	y;
 
-	index = 0;
-	index2 = 0;
-	while (str[index])
+	x = 0;
+	y = 0;
+	if (str[x] == '\0' && to_find[y] == '\0')
+		return (&str[x]);
+	while (str[x])
 	{
-		while (str[index] == to_find[index2])
-		{
-			ptr[index] = str[index];
-			index2++;
-			index++;
-		}
-		if (to_find[index2] != '\0')
-			return (0);
-		else
-			ptr[index] = str[index];
-		index++;
+		while (str[x + y] && to_find[y] && str[x + y] == to_find[y])
+			y++;
+		if (to_find[y] == '\0')
+			return (&str[x]);
+		y = 0;
+		x++;
 	}
-	return (ptr);
+	return (0);
 }

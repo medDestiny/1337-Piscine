@@ -6,7 +6,7 @@
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 18:42:05 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/09/03 17:16:45 by mmisskin         ###   ########.fr       */
+/*   Updated: 2022/09/05 15:10:28 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest[index] = src[index];
 		index++;
 	}
-	while (index <= n - 1)
+	while (index < n)
 	{
 		dest[index] = '\0';
 		index++;

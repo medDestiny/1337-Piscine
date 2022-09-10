@@ -6,7 +6,7 @@
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 21:19:20 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/09/03 13:21:39 by mmisskin         ###   ########.fr       */
+/*   Updated: 2022/09/06 18:53:42 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,5 @@ void	ft_putstr_non_printable(char *str)
 			write(1, &str[index], 1);
 		index++;
 	}
+	write(1, "\n", 1);
 }

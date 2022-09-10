@@ -5,63 +5,59 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/02 10:10:27 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/09/02 11:39:51 by mmisskin         ###   ########.fr       */
+/*   Created: 2022/09/07 17:54:24 by mmisskin          #+#    #+#             */
+/*   Updated: 2022/09/07 18:09:58 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
 
-int	repeat(char c)
+int	count(char c)
 {
-	int i;
+	int	count;
 	char x;
 	char y;
+	
 	x = 'a';
 	y = 'A';
-	i = 0;
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	count = 1;
+	if (c >= 'a' && c <= 'z')
 	{
-		if (c >= 'a' && c <= 'z')
+		while (x < c)
 		{
-			while (x <= c)
-			{
-				x++;
-				i++;
-			}
-			return (i);
-		}
-		if (c >= 'A' && c <= 'Z')
-		{
-			while (y <= c)
-			{
-				y++;
-				i++;
-			}
-			return (i);
+			count++;
+			x++;
 		}
 	}
-	return (1);
+	else if (c >= 'A' && c<= 'Z')
+	{
+		while (y < c)
+		{
+			count++;
+			y++;
+		}
+	}
+	return (count);
 }
 
 int	main(int ac, char **av)
 {
 	int	i;
-	int	count;
+	int	x;
+
 	i = 0;
 	if (ac == 2)
 	{
-		while (av[1][i] != '\0')
+		while (av[1][i])
 		{
-			count = 0;
-			while (count < repeat(av[1][i]))
+			x = 0;
+			while (x < count(av[1][i]))
 			{
 				write(1, &av[1][i], 1);
-				count++;
+				x++;
 			}
 			i++;
 		}
 	}
 	write(1, "\n", 1);
 }
-
