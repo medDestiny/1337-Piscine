@@ -6,7 +6,7 @@
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 15:33:12 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/09/04 17:36:04 by mmisskin         ###   ########.fr       */
+/*   Updated: 2022/09/12 10:32:08 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ int ft_recursive_power(int nb, int power);
 
 int	main()
 {
-	printf("%d", ft_recursive_power(4,7));
+	printf("%d", ft_recursive_power(4,13));
 }

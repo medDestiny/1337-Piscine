@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/04 11:22:45 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/09/12 09:49:26 by mmisskin         ###   ########.fr       */
+/*   Created: 2022/09/11 22:39:09 by mmisskin          #+#    #+#             */
+/*   Updated: 2022/09/11 23:35:06 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#ifndef	_FT_H_
+#define	_FT_H_
 
-int ft_iterative_factorial(int nb);
+void ft_putchar(char c);
+void ft_swap(int *a, int *b);
+void ft_putstr(char *str);
+int ft_strlen(char *str);
+int ft_strcmp(char *s1, char *s2);
 
-int	main()
-{
-	printf("%d", ft_iterative_factorial(12));
-}
+#endif

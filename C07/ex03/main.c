@@ -5,16 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/04 11:22:45 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/09/12 09:49:26 by mmisskin         ###   ########.fr       */
+/*   Created: 2022/09/11 18:47:54 by mmisskin          #+#    #+#             */
+/*   Updated: 2022/09/11 19:18:01 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+char *ft_strjoin(int size, char **strs, char *sep);
 
-int ft_iterative_factorial(int nb);
+#include<stdio.h>
 
 int	main()
 {
-	printf("%d", ft_iterative_factorial(12));
+	char *str[] = {"test", "test1", "test2", "test3"};
+	char *sep = ", ";
+	int	s = 4;
+
+	printf("%s", ft_strjoin(s, str, sep));
 }

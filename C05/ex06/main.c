@@ -6,7 +6,7 @@
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 13:35:51 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/09/10 17:11:25 by mmisskin         ###   ########.fr       */
+/*   Updated: 2022/09/12 11:52:32 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ int ft_is_prime(int nb);
 
 int	main()
 {
-	printf("%d", ft_is_prime(INT_MIN));
+	printf("%d", ft_is_prime(2147483541));
 }

@@ -6,7 +6,7 @@
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 12:46:37 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/09/04 15:06:13 by mmisskin         ###   ########.fr       */
+/*   Updated: 2022/09/12 10:03:26 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ int ft_recursive_factorial(int nb);
 
 int	main()
 {
-	printf("%d", ft_recursive_factorial(5));
+	printf("%d", ft_recursive_factorial(12));
 
 }
