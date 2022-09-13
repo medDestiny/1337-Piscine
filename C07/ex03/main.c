@@ -6,7 +6,7 @@
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 18:47:54 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/09/11 19:18:01 by mmisskin         ###   ########.fr       */
+/*   Updated: 2022/09/13 19:30:48 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ char *ft_strjoin(int size, char **strs, char *sep);
 
 int	main()
 {
-	char *str[] = {"test", "test1", "test2", "test3"};
-	char *sep = ", ";
-	int	s = 4;
+	char *str[] = {};
+	char *sep = "\n	[Lorem ipsum dolor sit amet, consectetur adipiscing elit.]	\n";
+	int	s = 0;
 
 	printf("%s", ft_strjoin(s, str, sep));
 }

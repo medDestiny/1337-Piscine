@@ -6,7 +6,7 @@
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 18:46:50 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/09/11 19:49:28 by mmisskin         ###   ########.fr       */
+/*   Updated: 2022/09/13 19:51:40 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,11 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 
 	x = 0;
 	len = 0;
+	if (size == 0)
+	{
+		dest = (char *)malloc(1 * sizeof(char));
+		return (dest);
+	}
 	while (x < size)
 	{
 		len += ft_strlen(strs[x]);

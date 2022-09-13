@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/04 15:33:12 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/09/12 10:32:08 by mmisskin         ###   ########.fr       */
+/*   Created: 2022/08/28 16:19:49 by mmisskin          #+#    #+#             */
+/*   Updated: 2022/08/30 15:13:25 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-
-int ft_recursive_power(int nb, int power);
-
-int	main()
+int	ft_strlen(char *str)
 {
-	printf("%d", ft_recursive_power(4,13));
+	int	index;
+
+	index = 0;
+	while (str[index] != '\0')
+		index++;
+	return (index);
 }

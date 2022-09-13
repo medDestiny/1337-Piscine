@@ -6,7 +6,7 @@
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 12:50:41 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/09/07 13:21:06 by mmisskin         ###   ########.fr       */
+/*   Updated: 2022/09/13 09:54:11 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char *ft_strdup(char *src);
 
 int	main()
 {
-	char *src = "abcdefghijklmnopqrh8wr8b 779wh7 bw9h bqgv 7v9w && gw stuvwxyz";
+	char *src = "abcdefghijklmn me testink had string hh if it works it works ez";
 
 	printf("%s", ft_strdup(src));
 }

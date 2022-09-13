@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/10 12:03:01 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/09/12 12:18:57 by mmisskin         ###   ########.fr       */
+/*   Created: 2022/08/24 13:22:50 by mmisskin          #+#    #+#             */
+/*   Updated: 2022/08/25 11:37:52 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_sqrt(int nb);
+#include<unistd.h>
 
-#include<stdio.h>
-#include<limits.h>
-
-int	main()
+void	ft_putchar(char c)
 {
-	printf("%d", ft_sqrt(2147395600));
+	write(1, &c, 1);
 }

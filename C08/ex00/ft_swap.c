@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/04 18:56:22 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/09/12 11:29:32 by mmisskin         ###   ########.fr       */
+/*   Created: 2022/08/27 16:06:01 by mmisskin          #+#    #+#             */
+/*   Updated: 2022/08/30 09:40:44 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-
-int ft_fibonacci(int index);
-
-int	main()
+void	ft_swap(int *a, int *b)
 {
-	printf("%d", ft_fibonacci(13));
+	int	temporary;
+
+	temporary = *a;
+	*a = *b;
+	*b = temporary;
 }

@@ -5,17 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmisskin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/10 13:35:51 by mmisskin          #+#    #+#             */
-/*   Updated: 2022/09/12 11:52:32 by mmisskin         ###   ########.fr       */
+/*   Created: 2022/09/12 15:05:42 by mmisskin          #+#    #+#             */
+/*   Updated: 2022/09/12 16:02:25 by mmisskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_is_prime(int nb);
-
+#include "ft.h"
 #include<stdio.h>
-#include<limits.h>
 
 int	main()
 {
-	printf("%d", ft_is_prime(2147483541));
+	int	i = 0;
+	int	j = 5;
+	
+	//ft_putchar('Y');
+	//ft_putchar('\n');
+	//ft_putstr("test\n");
+	//ft_strcmp("A", "B");
+	//ft_putchar('\n');
+	//ft_strlen("123456");
+	ft_swap(&i, &j);
+	printf("i = %d && j = %d", i, j);
 }
